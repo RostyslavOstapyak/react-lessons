@@ -1,13 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
 
 ReactDOM.render(
-<>
- <h1>Search Form</h1>
-<div>
-   <input type="text" />
-   <button>Search</button>
-</div>
-</>,
+  <h1 class="title">Todo List</h1>,
   document.getElementById("root")
 );
