@@ -9,7 +9,7 @@ const userInfo = (props) =>{
         <div className="profile__birth">{`Was born ${moment(new Date(props.userData.birthDate)).format('DD MMM YY')} 
         in ${props.userData.birthPlace}`}</div>
     </div>
-    )
-}
+    );
+};
 
 export default userInfo;
