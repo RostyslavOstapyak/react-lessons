@@ -5,4 +5,33 @@ body {
 #root {
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  font-size: 2em;
+  padding: 10px;
+  border: 3px solid rgba(0, 255, 13, 0.185);
+  background: linear-gradient(
+    45deg,
+    hsla(0deg 100% 25% / 35%),
+    rgba(38, 255, 0, 0.52),
+    yellow
+  );
+  font-weight: 700;
+  color: transparent;
+  background-clip: text;
+  animation: animate 3s linear infinite;
+  box-shadow: 0 0 54px 20px rgb(78 128 128 / 71%);
+}
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
 }
