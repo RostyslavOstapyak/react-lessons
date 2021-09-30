@@ -11,7 +11,7 @@ function Comment(props) {
   // ключи обьекта props это ключевые слова 
   // которые мы указали в предыдущем файле 
   // (в том откуда "прилетели" эти значения)
-  // user{
+  // author{
   // name:'Tom',
   // avatarUrl: 'url'
   // }
@@ -30,7 +30,7 @@ function Comment(props) {
 
   return (
     <div className="comment">
-      <UserInfo user={props.user} /> 
+      <UserInfo author={props.author} /> 
       <div className="comment__text">{props.text}</div>
       <div className="comment__date">{formatDate(props.date)}</div>
     </div>
