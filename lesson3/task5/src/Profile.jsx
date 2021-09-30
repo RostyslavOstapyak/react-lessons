@@ -1,9 +1,11 @@
 import React from 'react';
 import moment from 'moment';
 
-const Profile = (props) =>{
-    const {firstName, lastName,birthDate,birthPlace} = props;
+const Profile = ({userData}) =>{
+ 
+    const {firstName, lastName,birthDate,birthPlace} = userData;
     const formattedDate = moment(birthDate).format('DD MMM YY');
+    
     return (
     <div className="profile">
         <div className="profile__name">{`${firstName} ${lastName}`}</div>
