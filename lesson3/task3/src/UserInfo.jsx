@@ -3,7 +3,7 @@ import Avatar from './Avatar.jsx'
 
  const UserInfo = (props) =>{
     //  console.log(props)
-     // тут мы получаем обьект props с ключем author
+     // тут мы получаем обьект props с ключем user
      // так как указали это в предыдущем файле
      // сам же обьект user имеет внутри поля
      // avatarUrl + name
@@ -14,8 +14,8 @@ import Avatar from './Avatar.jsx'
      
     return(
         <div className="user-info">
-       <Avatar avatarUrl={props.author.avatarUrl} name={props.author.name} />
-        <div className="user-info__name">{props.author.name}</div>
+       <Avatar avatarUrl={props.user.avatarUrl} name={props.user.name} />
+        <div className="user-info__name">{props.user.name}</div>
       </div>
     );
 };
