@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Comment from "./Comments.jsx";
+import Comment from "./Comment.jsx";
 
 const userInfo = {
   name: "Tom",
