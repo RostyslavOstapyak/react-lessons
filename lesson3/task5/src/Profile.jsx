@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const userInfo = (props) =>{
+const Profile = (props) =>{
     console.log(props)
     return (
     <div className="profile">
@@ -12,4 +12,4 @@ const userInfo = (props) =>{
     );
 };
 
-export default userInfo;
+export default Profile;
