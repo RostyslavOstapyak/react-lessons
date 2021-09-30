@@ -6,7 +6,8 @@ const userInfo = (props) =>{
     return (
     <div className="profile">
         <div className="profile__name">{`${props.userData.firstName} ${props.userData.lastName}`}</div>
-        <div className="profile__birth">{`Was born ${new Date(props.userData.birthDate).getDate()} ${moment().format("MMM")} ${new Date(props.userData.birthDate).getFullYear()% 100} in ${props.userData.birthPlace}`}</div>
+        <div className="profile__birth">{`Was born ${moment(new Date(props.userData.birthDate)).format('DD MMM YY')} 
+        in ${props.userData.birthPlace}`}</div>
     </div>
     )
 }
