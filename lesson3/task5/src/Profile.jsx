@@ -9,8 +9,7 @@ const Profile = ({userData}) =>{
     return (
     <div className="profile">
         <div className="profile__name">{`${firstName} ${lastName}`}</div>
-        <div className="profile__birth">{`Was born ${formattedDate} 
-        in ${birthPlace}`}</div>
+        <div className="profile__birth">{`Was born ${formattedDate} in ${birthPlace}`}</div>
     </div>
     );
 };
