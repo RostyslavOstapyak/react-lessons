@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.scss";
-import GoodButton from "./GoodButton.jsx";
+import ColorPicker from "./ColorPicker.jsx";
 
 ReactDOM.render(
   <>
-    <GoodButton />
+    <ColorPicker />
   </>,
   document.getElementById("root")
 );
