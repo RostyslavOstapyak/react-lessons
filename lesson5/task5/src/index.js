@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.scss";
-import GoodButton from "./GoodButton.jsx";
+import Toggler from "./Toggler.jsx";
 
 ReactDOM.render(
   <>
-    <GoodButton />
+    <Toggler />
   </>,
   document.getElementById("root")
 );
