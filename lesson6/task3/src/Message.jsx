@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import Message from "./Message.jsx";
+import React from "react";
 
 const Message = ({ text }) => {
   if (!text) {

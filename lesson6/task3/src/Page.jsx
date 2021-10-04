@@ -1,14 +1,11 @@
 import React from "react";
-import Message from "Message.jsx";
+import Message from "./Message.jsx";
 
 const text1 = "Hello, world!";
 const text2 = "Another exciting text.";
 
 class Page extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state.text = { text: null };
-  }
+  state = { text: null };
 
   setText = (text) => {
     this.setState({ text: text });
@@ -32,3 +29,5 @@ class Page extends React.Component {
     );
   }
 }
+
+export default Page;
