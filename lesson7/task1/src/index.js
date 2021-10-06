@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.scss";
-import App from "./App.jsx";
+import NumbersList from "./NumbersList.jsx";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const numbers = [1, 2, 3, 4, 5];
+
+ReactDOM.render(
+  <NumbersList numbers={numbers} />,
+  document.getElementById("root")
+);
