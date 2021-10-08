@@ -3,23 +3,21 @@ import User from './User';
 import Filter from './Filter';
 
 class UsersList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.usersList = props.usersList;
-    this.state = { searchStr: '' };
-  }
+  state = { searchStr: '' };
 
   handleChange = e => {
     this.setState({ searchStr: e.target.value });
   };
 
   render() {
-    const resultArray = this.state.searchStr
-      ? this.usersList.filter(user =>
-          user.name.toUpperCase().includes(this.state.searchStr.toUpperCase()),
-        )
-      : this.usersList;
+    const usersArray = this.props.usersList;
+    console.log(usersArray);
 
+    const resultArray = this.state.searchStr
+      ? usersArray.filter(user =>
+          user.name.toLowerCase().includes(this.state.searchStr.toLowerCase()),
+        )
+      : usersArray;
     return (
       <div>
         <Filter
