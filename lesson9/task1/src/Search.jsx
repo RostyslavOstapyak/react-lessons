@@ -7,18 +7,21 @@ class Search extends React.Component {
     this.setState({ value: e.target.value });
   };
 
-  handleClick = () => alert(`Search text: ${this.state.value}`);
+  search = e => {
+    e.preventDefault();
+    alert(`Search text: ${this.state.value}`);
+  };
 
   render() {
     return (
-      <form className="search">
+      <form className="search" onSubmit={this.search}>
         <input
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
           className="search__input"
         />
-        <button className="search__button" onClick={this.handleClick}>
+        <button className="search__button" type="submit">
           Search
         </button>
       </form>
