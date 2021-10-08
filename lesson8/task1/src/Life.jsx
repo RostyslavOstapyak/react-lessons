@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 
 class Life extends Component {
@@ -17,13 +19,16 @@ class Life extends Component {
     // return nextProps.number % 2;
     return true;
   }
+
   componentDidUpdate(prevProps, prevState) {
     // console.log(prevProps, prevState);
     console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
   }
+
   componentWillUnmount() {
     console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
   }
+
   render() {
     console.log('return React element to build DOM');
 
