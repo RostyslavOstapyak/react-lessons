@@ -19,7 +19,7 @@ class UsersList extends React.Component {
         <Filter count={5} func={this.handleChange} />
         <ul className="users">
           {this.usersList.map(user => {
-            if (user.name.includes(this.state.searchStr)) {
+            if (user.name.toUpperCase().includes(this.state.searchStr.toUpperCase())) {
               return <User key={user.id} name={user.name} age={user.age} />;
             }
             return null;
