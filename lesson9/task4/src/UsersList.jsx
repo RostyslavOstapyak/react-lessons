@@ -22,7 +22,11 @@ class UsersList extends React.Component {
 
     return (
       <div>
-        <Filter count={resultArray.length} onChange={this.handleChange} />
+        <Filter
+          count={resultArray.length}
+          onChange={this.handleChange}
+          filterText={this.state.searchStr}
+        />
         <ul className="users">
           {resultArray.map(user => (
             <User key={user.id} name={user.name} age={user.age} />
