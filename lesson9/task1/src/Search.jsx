@@ -3,11 +3,11 @@ import React from 'react';
 class Search extends React.Component {
   state = { value: '' };
 
-  onChange = e => {
+  handleChange = e => {
     this.setState({ value: e.value });
   };
 
-  onClick = () => alert(`Search text: ${this.state.value}`);
+  handleClick = () => alert(`Search text: ${this.state.value}`);
 
   render() {
     return (
@@ -15,10 +15,10 @@ class Search extends React.Component {
         <input
           type="text"
           value={this.state.value}
-          onChange={this.onChange}
+          onChange={this.handleChange}
           className="search__input"
         />
-        <button className="search__button" onClick={this.onClick}>
+        <button className="search__button" onClick={this.handleClick}>
           Search
         </button>
       </form>
