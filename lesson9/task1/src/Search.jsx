@@ -4,7 +4,7 @@ class Search extends React.Component {
   state = { value: '' };
 
   handleChange = e => {
-    this.setState({ value: e.value });
+    this.setState({ value: e.target.value });
   };
 
   handleClick = () => alert(`Search text: ${this.state.value}`);
