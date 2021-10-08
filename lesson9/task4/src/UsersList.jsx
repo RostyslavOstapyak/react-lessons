@@ -14,16 +14,19 @@ class UsersList extends React.Component {
   };
 
   render() {
+    const resultArray = this.state.searchStr
+      ? this.usersList.filter(user =>
+          user.name.toUpperCase().includes(this.state.searchStr.toUpperCase()),
+        )
+      : this.usersList;
+
     return (
       <div>
-        <Filter count={5} func={this.handleChange} />
+        <Filter count={resultArray.length} onChange={this.handleChange} />
         <ul className="users">
-          {this.usersList.map(user => {
-            if (user.name.toUpperCase().includes(this.state.searchStr.toUpperCase())) {
-              return <User key={user.id} name={user.name} age={user.age} />;
-            }
-            return null;
-          })}
+          {resultArray.map(user => (
+            <User key={user.id} name={user.name} age={user.age} />
+          ))}
         </ul>
       </div>
     );
