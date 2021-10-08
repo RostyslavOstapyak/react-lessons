@@ -1,9 +1,11 @@
 import React from 'react';
-import User from './User';
-import Filter from './Filter';
+import User from './User.jsx';
+import Filter from './Filter.jsx';
 
 class UsersList extends React.Component {
-  state = { searchStr: '' };
+  state = {
+    value: '',
+  };
 
   handleChange = e => {
     this.setState({
@@ -12,27 +14,20 @@ class UsersList extends React.Component {
   };
 
   render() {
-    const usersArray = this.props.usersList;
-
-    const resultArray =
-      this.state.searchStr === ''
-        ? usersArray
-        : usersArray.filter(user =>
-            user.name.toLowerCase().includes(this.state.searchStr.toLowerCase()),
-          );
-
+    const users = this.props.users;
+    const resultUsersList = (
+      this.state.value === ''
+        ? users
+        : users.filter(user => user.name.toLowerCase().includes(this.state.value.toLowerCase()))
+    ).map(user => <User key={user.id} name={user.name} age={user.age} />);
     return (
       <>
         <Filter
-          count={resultArray.length}
+          filterText={this.state.value}
+          count={resultUsersList.length}
           onChange={this.handleChange}
-          filterText={this.state.searchStr}
         />
-        <ul className="users">
-          {resultArray.map(user => (
-            <User key={user.id} name={user.name} age={user.age} />
-          ))}
-        </ul>
+        <ul className="users">{resultUsersList}</ul>
       </>
     );
   }
