@@ -11,13 +11,14 @@ class UsersList extends React.Component {
 
   render() {
     const usersArray = this.props.usersList;
-    console.log(usersArray);
 
-    const resultArray = this.state.searchStr
-      ? usersArray.filter(user =>
-          user.name.toLowerCase().includes(this.state.searchStr.toLowerCase()),
-        )
-      : usersArray;
+    const resultArray =
+      this.state.searchStr === ''
+        ? usersArray
+        : usersArray.filter(user =>
+            user.name.toLowerCase().includes(this.state.searchStr.toLowerCase()),
+          );
+
     return (
       <div>
         <Filter
