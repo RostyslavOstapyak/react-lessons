@@ -6,7 +6,9 @@ class UsersList extends React.Component {
   state = { searchStr: '' };
 
   handleChange = e => {
-    this.setState({ searchStr: e.target.value });
+    this.setState({
+      value: e.target.value,
+    });
   };
 
   render() {
@@ -20,7 +22,7 @@ class UsersList extends React.Component {
           );
 
     return (
-      <div>
+      <>
         <Filter
           count={resultArray.length}
           onChange={this.handleChange}
@@ -31,7 +33,7 @@ class UsersList extends React.Component {
             <User key={user.id} name={user.name} age={user.age} />
           ))}
         </ul>
-      </div>
+      </>
     );
   }
 }
