@@ -20,9 +20,9 @@ class Page extends React.Component {
     return (
       <div className="page">
         <header className="header">
-          <UserMenu usrData={this.state.userData} />
+          <UserMenu userData={this.state.userData} />
         </header>
-        <UserProfile usrData={this.state.userData} />
+        <UserProfile userData={this.state.userData} />
       </div>
     );
   }
