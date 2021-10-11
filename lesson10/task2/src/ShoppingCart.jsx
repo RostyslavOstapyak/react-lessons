@@ -17,6 +17,7 @@ class ShoppingCart extends React.Component {
       },
     ],
   };
+
   render() {
     const count = this.state.cartItems.length;
     return (

@@ -6,22 +6,28 @@ class App extends React.Component {
   state = {
     userData: {
       firstName: 'Tom',
-      lastName: 'Form',
+      lastName: 'Ford',
     },
   };
 
-  handleChange = e => {
-    const { name, value } = e.target;
-    this.setState({ userData: { ...this.state.userData, [name]: value } });
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      userData: {
+        ...this.state.userData,
+        [name]: value,
+      },
+    });
   };
 
   render() {
+    const { userData } = this.state;
     return (
       <div className="page">
-        <h1 className="title">{`Hello, ${this.state.userData.firstName} ${this.state.userData.lastName}`}</h1>
+        <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
         <main className="content">
-          <ShoppingCart userData={this.state.userData} />
-          <Profile userData={this.state.userData} handleChange={this.handleChange} />
+          <ShoppingCart userName={userData.firstName} />
+          <Profile userData={userData} handleChange={this.handleChange} />
         </main>
       </div>
     );
