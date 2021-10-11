@@ -12,7 +12,7 @@ const Expand = ({ children, toggleContent, isVisible, title }) => (
         )}
       </button>
     </div>
-    {isVisible ? <div className="expand__content">children</div> : null}
+    {isVisible ? <div className="expand__content">{children}</div> : null}
   </div>
 );
 
