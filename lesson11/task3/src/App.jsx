@@ -15,7 +15,7 @@ class App extends React.Component {
         isVisible={this.state.contentVisible}
         title="Some title IDK"
       >
-        idk,something
+        idk, some text
       </Expand>
     );
   }
