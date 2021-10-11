@@ -4,7 +4,7 @@ class Expand extends React.Component {
   state = { isVisible: false };
 
   toggleContent = () => {
-    this.setState({ contentVisible: !this.state.contentVisible });
+    this.setState({ isVisible: !this.state.isVisible });
   };
 
   render() {
