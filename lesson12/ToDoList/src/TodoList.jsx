@@ -21,11 +21,6 @@ class TodoList extends React.Component {
         done: false,
       },
     ],
-    newTaskName: '',
-  };
-
-  handleChange = e => {
-    this.setState({ newTaskName: e.target.value });
   };
 
   getMaxId = () => {
@@ -40,17 +35,15 @@ class TodoList extends React.Component {
     return maxId;
   };
 
-  onCreate = () => {
+  onCreate = text => {
     const taskObject = {
       id: this.getMaxId(),
-      text: this.state.newTaskName,
+      text,
       done: false,
     };
-    console.log(taskObject);
     this.setState({
       tasksList: [...this.state.tasksList, taskObject],
     });
-    this.setState({ newTaskName: '' });
   };
 
   handleDelete = taskObject => {
@@ -70,11 +63,7 @@ class TodoList extends React.Component {
       <>
         <h1 className="title">Todo List</h1>
         <main className="todo-list">
-          <CreateTask
-            taskName={this.state.newTaskName}
-            handleChange={this.handleChange}
-            onCreate={this.onCreate}
-          />
+          <CreateTask onCreate={this.onCreate} />
           <TasksList
             tasksList={this.state.tasksList}
             handleDelete={this.handleDelete}
