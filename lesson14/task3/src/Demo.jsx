@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
-import Dimensions from './Dimensions.jsx';
+// import React, { useState } from 'react';
+// import Dimensions from './Dimensions.jsx';
 
-const Demo = () => {
-  const [isVisible, setIsVisible] = useState(true);
+// const Demo = () => {
+//   const [isVisible, setIsVisible] = useState(true);
 
-  return (
-    <div>
-      <div>
-        <button className="btn" onClick={() => setIsVisible(true)}>
-          Show
-        </button>
-        <button className="btn" onClick={() => setIsVisible(false)}>
-          Hide
-        </button>
-      </div>
-      {isVisible && <Dimensions />}
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <div>
+//         <button className="btn" onClick={() => setIsVisible(true)}>
+//           Show
+//         </button>
+//         <button className="btn" onClick={() => setIsVisible(false)}>
+//           Hide
+//         </button>
+//       </div>
+//       {isVisible && <Dimensions />}
+//     </div>
+//   );
+// };
 
-export default Demo;
+// export default Demo;
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// no need this one for task
