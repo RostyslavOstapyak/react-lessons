@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
-import Product from './Product.jsx';
+import Product from './product.jsx';
 
 const Products = () => (
   <div className="page__content">
