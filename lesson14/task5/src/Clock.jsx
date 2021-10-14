@@ -13,7 +13,7 @@ const Clock = ({ location, offset }) => {
     const intervalId = setInterval(() => {
       setTime(getTimeWithOffset(this.props.offset).toLocaleTimeString());
     }, 1000);
-    return clearInterval(intervalId);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
