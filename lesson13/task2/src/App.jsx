@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import Products from './products.jsx';
-import Home from './home.jsx';
+import Home from './Home.jsx';
+import Products from './Products.jsx';
 
 const App = () => (
   <div className="page">
@@ -14,14 +14,9 @@ const App = () => (
           <Link to="/products">Products</Link>
         </li>
       </ul>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/products">
-        <Products />
-      </Route>
+      <Route exact path="/" component={Home} />
+      <Route path="/products" component={Products} />
     </BrowserRouter>
   </div>
 );
-
 export default App;
