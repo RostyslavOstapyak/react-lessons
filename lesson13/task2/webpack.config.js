@@ -14,6 +14,7 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, './dist'),
       filename: 'bundle.js',
+      publicPath: '/', // this one will send all requests to root of project (index.html)
     },
     module: {
       rules: [
@@ -40,6 +41,7 @@ module.exports = (env, argv) => {
     ],
     devServer: {
       hot: true,
+      historyApiFallback: true, // use this setting for SPA
     },
   };
 
