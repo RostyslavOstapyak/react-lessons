@@ -1,19 +1,23 @@
 import React from 'react';
+import useDebounce from './hooks/useDebounce'
+
 
 const App = () => {
   const [value, setValue] = React.useState('');
-  const debouncedSearch = useDebaounce(search, 500)
+  const DELAY = 500;
+  const debouncedSearch = useDebounce(search, DELAY);
 
-  const search = (query) => {
+  function search(query) {
     fetch(`https://jsonplaceholder.typicode.com/todos?query=${query}`)
       .then(response => response.json())
       .then(json => {
         console.log(json);
       })
   }
+
   const onChange = e => {
     setValue(e.target.value)
-    search(e.target.value)
+    debouncedSearch(e.target.value)
   }
 
   return <div>
