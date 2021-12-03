@@ -44,6 +44,7 @@ class TasksList extends React.Component {
 
   render() {
     const sortedList = this.state.tasks.slice().sort((a, b) => a.done - b.done);
+
     return (
       <main className="todo-list">
         <CreateTaskInput onCreate={this.onCreate} />
